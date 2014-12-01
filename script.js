@@ -13,7 +13,9 @@ $(document).ready(function() {
 	$("nav").hover(function(){
 		$(this).find("#hideBox").fadeIn();
 	}, function() {
-		$(this).find("#hideBox").fadeOut();
+		if ($(this).scrollTop() > 0) {
+			$(this).find("#hideBox").fadeOut();
+		}
 	});
 
 	$("#pageTop").click(function() {
